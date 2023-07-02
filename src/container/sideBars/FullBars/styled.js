@@ -3,7 +3,9 @@ import styled from "styled-components";
 export const FullSideBarStyle = styled.div`
     background-color: #000000;
     width: 100%;
-    height: 100vh;
+    height: 100%;
+    max-height: 100vh;
+    /* height: 100vh; */
     max-width: 200px;
     overflow: hidden;
     :hover{
@@ -56,6 +58,7 @@ export const FullSideBarStyle = styled.div`
         }
     }
     .SecondMenuSection{
+        /* height: 100px; */
         margin: 10px;
         border-bottom: hsla(0, 0%, 100%, 0.2) solid 0.5px;
         .menuCard{
@@ -109,6 +112,7 @@ export const FullSideBarStyle = styled.div`
     }
     .ContactSection{
         display: flex;
+        justify-content: center;
         height: 50px;
         margin: 10px;
         border-bottom: hsla(0, 0%, 100%, 0.2) solid 0.5px;

@@ -50,8 +50,8 @@ const NavBar = (
                 </div>
                 <div className="TitleContainer">
                     <YoutubeLogo
-                        height='30'
-                        width='auto'
+                        height='50'
+                        width='100'
                         textColor="#ffffff"
                         // textColor="#282828"
                     />

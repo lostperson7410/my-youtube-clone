@@ -36,8 +36,6 @@ const Homepage= () => {
                     OnbarOpen={handleBar}
                 />
             </div>
-            <div style={{color:'white'}}>
-            </div>
             <div className="lowerSection">
                 {
                     screenWidth > 550  ?

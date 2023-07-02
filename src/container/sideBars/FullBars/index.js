@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FullSideBarStyle } from "./styled";
 import { GoHomeFill ,GoVideo} from "react-icons/go"
-import { BsFacebook,BsInstagram ,BsLinkedin,BsYoutube} from "react-icons/bs"
+import { BsFacebook,BsInstagram ,BsLinkedin} from "react-icons/bs"
 import { MdOutlineSubscriptions ,MdVideoLibrary,MdHistory,MdOutlineWatchLater ,MdPlaylistAdd } from "react-icons/md"
 import BarCard from "../../../component/card/barCard";
 import shortslogo from "../../../assets/svg/youtube-shorts-logo-15251.svg"
@@ -73,11 +73,6 @@ const FullSideBar = ()=>{
             title:'linkedin',
             icon:<BsLinkedin size={20}/>,
             link:'https://www.linkedin.com/in/apinun-saartiam-5b388a277/'
-        },
-        {
-            title:'Youtube',
-            icon:<BsYoutube size={20}/>,
-            link:''
         },
         {
             title:'Instagram',

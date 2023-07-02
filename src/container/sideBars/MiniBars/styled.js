@@ -79,6 +79,7 @@ export const MiniSideBarStyle = styled.div`
         border-bottom: hsla(0, 0%, 100%, 0.2) solid 0.5px;
         column-gap: 4px;
         .menuContactCard{
+            margin: 5px 0px;
             display: flex;
             flex-direction: column;
             justify-content: center;

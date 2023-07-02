@@ -1,7 +1,7 @@
 import React from "react";
 import { MiniSideBarStyle } from './styled'
 import { GoHomeFill } from "react-icons/go"
-import { BsFacebook,BsInstagram ,BsLinkedin,BsYoutube} from "react-icons/bs"
+import { BsFacebook,BsInstagram ,BsLinkedin} from "react-icons/bs"
 import { MdOutlineSubscriptions } from "react-icons/md"
 import BarCard from "../../../component/card/barCard";
 import shortslogo from "../../../assets/svg/youtube-shorts-logo-15251.svg"
@@ -28,21 +28,24 @@ const MiniSideBar = ()=>{
     const contactMe = [
         {
             title:'linkedin',
-            icon:<BsLinkedin size={20}/>
-        },
-        {
-            title:'Youtube',
-            icon:<BsYoutube size={20}/>
+            icon:<BsLinkedin size={20}/>,
+            link:'https://www.linkedin.com/in/apinun-saartiam-5b388a277/'
         },
         {
             title:'Instagram',
-            icon:<BsInstagram size={20}/>
+            icon:<BsInstagram size={20}/>,
+            link:'https://www.instagram.com/apn_sfilm/'
         },
         {
             title:'Facebook',
-            icon:<BsFacebook size={20}/>
+            icon:<BsFacebook size={20}/>,
+            link:'https://web.facebook.com/kunchecksound'
         },
     ]
+
+    const opentab = (link)=>{
+        window.open(link);
+    }
 
     return(
         <MiniSideBarStyle>
@@ -66,7 +69,7 @@ const MiniSideBar = ()=>{
                     {
                         contactMe.map((item,index)=>{
                             return(
-                                <div className={`menuContactCard`}>
+                                <div className={`menuContactCard`} onClick={()=>opentab(item.link)}>
                                     <BarCard
                                         // title={item.title}
                                         icon={item.icon}
