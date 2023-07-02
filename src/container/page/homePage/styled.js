@@ -4,7 +4,7 @@ export const HomepageStyled = styled.div`
 
     background-color: #000000;
     width: 100%;
-    min-height: 100vh;
+    /* height: 100vh; */
     .upperSection{
         width: 100%;
         position: sticky;
@@ -18,7 +18,7 @@ export const HomepageStyled = styled.div`
 
     .outletSection{
         width: 100%;
-        background-color: blanchedalmond;
+        /* background-color: blanchedalmond; */
         /* margin: 50px; */
     }
 

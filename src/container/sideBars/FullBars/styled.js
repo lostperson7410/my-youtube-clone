@@ -80,7 +80,7 @@ export const FullSideBarStyle = styled.div`
         }
     }
     .SubscriptionsSection{
-        height: 200px;
+        max-height: 200px;
         margin: 10px;
         border-bottom: hsla(0, 0%, 100%, 0.2) solid 0.5px;
         .title{

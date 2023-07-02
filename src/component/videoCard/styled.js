@@ -13,17 +13,20 @@ export const VideoCardStyled = styled.div`
         width: 100%;
         height: 100%;
        .CardVideoSection{
-        width: 100%;
-        max-width: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: fit-content;
+        /* max-width: 300px; */
         height: 80%;
-        background-color: #fff;
+        /* background-color: #fff; */
         border-radius: 5px;
         overflow: hidden;
         img{
-            /* width: 10px; */
+            width: 100%;
             max-height: 210px;
-            max-width: 300px;
-            object-fit: cover;
+            max-width: 310px;
+            object-fit: scale-down;
         }
         :hover{
             border-radius: 0px;
@@ -58,4 +61,12 @@ export const VideoCardStyled = styled.div`
         /* background-color: #f1f1f1f1; */
        }
     }
+    @media only screen and (max-width: 375px) {
+        .CardVideoSection{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    
 `

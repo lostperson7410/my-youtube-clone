@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { HomepageStyled } from "./styled";
 import NavBar from "../../../component/navbar";
 import FullSideBar from "../../sideBars/FullBars";
@@ -15,6 +15,20 @@ const Homepage= () => {
         setisSideBar(!isSideBar)
     }
 
+    const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
+    useEffect(() => {
+        const handleResize = () => {
+        setScreenWidth(window.innerWidth);
+        };
+
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+        window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
     return(
         <HomepageStyled>
             <div className="upperSection">
@@ -22,15 +36,21 @@ const Homepage= () => {
                     OnbarOpen={handleBar}
                 />
             </div>
+            <div style={{color:'white'}}>
+            </div>
             <div className="lowerSection">
                 {
+                    screenWidth > 550  ?
+
                     isSideBar ?
-                    <FullSideBar/>
+                    
+                    <FullSideBar/>:<MiniSideBar/>
                     :
-                    <MiniSideBar/>
-                    // <div className='sidebarSection'>
-                    //     <p>Sidebar here</p>
-                    // </div>
+                    isSideBar ?
+                    <MiniSideBar/>: 
+                    <div style={{position:'absolute',zIndex:'9999'}}>
+                        <FullSideBar/>
+                    </div>
                 }
                 <div className='outletSection'>
                     <VideoContent/>
