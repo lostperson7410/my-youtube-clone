@@ -3,8 +3,9 @@ import styled from "styled-components";
 export const MiniSideBarStyle = styled.div`
     background-color: #000000;
     width: 100%;
+    height: 100%;
     max-width: 60px;
-    min-height: 100vh;
+    max-height: 100vh;
     overflow-y: unset;
     .MainMenuSection{
         /* margin: 10px; */
